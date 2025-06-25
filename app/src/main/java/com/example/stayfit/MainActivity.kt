@@ -20,10 +20,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.stayfit.screens.MenuScreen
+import com.example.stayfit.screens.PauseScreen
 import com.example.stayfit.screens.WorkoutScreen
 import com.example.stayfit.ui.theme.StayfitTheme
 
@@ -37,8 +40,11 @@ class MainActivity : ComponentActivity() {
                 composable(route = "menu_screen") {
                     MenuScreen(navController)
                 }
-                composable(route = "workout_screen" + "/{needHelpHere}") {
+                composable(route = "workout_screen" + "/{List<Exercise>}") {
                     WorkoutScreen(navController)
+                    navArgument("List<Exercise>") {
+
+                    }
                 }
             }
         }
@@ -58,4 +64,13 @@ fun Header() {
             painter = painterResource(R.drawable.logo),
             contentDescription = "logo")
     }
+}
+
+@Composable
+fun Background() {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.hsl(240f, 0f, 0.2f))
+    )
 }

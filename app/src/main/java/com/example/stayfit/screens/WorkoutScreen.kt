@@ -2,7 +2,6 @@ package com.example.stayfit.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,17 +25,21 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.stayfit.Background
 import com.example.stayfit.Header
 import com.example.stayfit.R
 
 @Composable
 fun WorkoutScreen(navController: NavController) {
-
+    Background()
 }
 
 @Composable
 fun Exercise() {
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+    ) {
         Box(
             contentAlignment = Alignment.Center,
         ){
@@ -45,8 +48,7 @@ fun Exercise() {
                 contentDescription = "contentDescription",
                 modifier = Modifier
                     .size(250.dp)
-                    .background(Color.White, CircleShape)
-                    .padding(2.dp),
+                    .background(Color.White, CircleShape),
                 tint = Color.White
             )
             Image(
@@ -70,7 +72,6 @@ fun Exercise() {
             color = Color.White,
             modifier = Modifier
                 .width(300.dp)
-                .padding(top = 6.dp)
         )
     }
 }
@@ -78,11 +79,7 @@ fun Exercise() {
 @Preview(showBackground = true)
 @Composable
 fun WorkoutScreenPreview() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.hsl(240f, 0f, 0.2f))
-    )
+    Background()
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top,

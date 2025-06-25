@@ -27,11 +27,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.example.stayfit.Background
 import com.example.stayfit.Header
 import com.example.stayfit.R
 
 @Composable
 fun MenuScreen(navController: NavController) {
+    Background()
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top,
@@ -111,11 +113,7 @@ fun WorkoutListEntry() {
 @Preview(showBackground = true)
 @Composable
 fun FitnessAppPreview() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.hsl(240f, 0f, 0.2f))
-    )
+    Background()
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top,
