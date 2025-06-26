@@ -44,8 +44,8 @@ val exercise4 = Exercise(
 )
 
 val exercise5 = Exercise(
-    "Liegestütze",
-    "Mache Liegestützte",
+    "Dumbbell Bend",
+    "12 reps, 5 sets",
     30f,
     listOf(
         R.drawable.exercise5_1,

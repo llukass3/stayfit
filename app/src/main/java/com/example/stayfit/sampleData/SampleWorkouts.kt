@@ -3,7 +3,8 @@ package com.example.stayfit.sampleData
 import com.example.stayfit.Workout
 
 val workout1 = Workout(
-    "Beine-Po",
+    "Beine-Po 1",
+    1,
     listOf(
         exercise1,
         exercise2,
@@ -13,7 +14,8 @@ val workout1 = Workout(
 )
 
 val workout2 = Workout(
-    "Beine",
+    "Beine-Po 2",
+    2,
     listOf(
         exercise5,
         exercise6,
