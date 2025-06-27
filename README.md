@@ -1,6 +1,8 @@
 # stayfit 
 StayFit ist eine Android-App, die Nutzer:innen durch strukturierte Workouts führt. Mit Bild, Beschreibung und Timer für jede Übung sowie automatischem Übergang zur nächsten.
 
+- APK Datei in Release-Ordner
+
 ## Funktionen
 
 - Startseite mit Auswahl zwischen zwei vorgefertigten Workouts  
